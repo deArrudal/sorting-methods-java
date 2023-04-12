@@ -31,7 +31,7 @@ This repository contains the following sorting algorithms:
 
 ## Authors
 
- - deArruda, Lucas [@DomPizzie](https://twitter.com/dompizzie)
+ - deArruda, Lucas [@SardinhaArruda](https://twitter.com/SardinhaArruda)
 
 ## Version History
 
