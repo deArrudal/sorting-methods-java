@@ -3,7 +3,7 @@
  * Objective: Implement a Quick sort routine.
  * Implemented by Lucas deArruda
  * Created in 11/04/2023
- * v1.0
+ * v1.01
  */
 
 public class QuickSort {
@@ -18,7 +18,7 @@ public class QuickSort {
     // Slipt array into two partitions.
     public static int partition(int[] array, int low, int high) {
         int pivot = array[high]; // Choose the last element as the pivot.
-        int i = low - 1; // pivot index.
+        int i = low - 1; // Temporary pivot index.
         int swap;
 
         for (int j = low; j <= (high - 1); j++) {

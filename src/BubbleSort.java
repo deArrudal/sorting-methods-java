@@ -3,14 +3,14 @@
  * Objective: Implement a Bubble sort routine.
  * Implemented by Lucas deArruda
  * Created in 11/04/2023
- * v1.0
+ * v1.01
  */
 
 public class BubbleSort {
     public static void method(int[] array) {
         boolean flag_end; // Flag end of sort procedure.
-        int swap;
         int size = array.length;
+        int swap;
 
         do {
             flag_end = true; // Reset.

@@ -3,12 +3,13 @@
  * Objective: Implement a Merge sort routine.
  * Implemented by Lucas deArruda
  * Created in 11/04/2023
- * v1.0
+ * v1.01
  */
 
 public class MergeSort {
     public static void method(int[] array) {
         int size = array.length;
+        int i;
 
         // Recursion return condition.
         if (size <= 1) {
@@ -16,50 +17,52 @@ public class MergeSort {
         }
 
         // Slipt array in two.
-        int midIndex = size / 2;
-        int[] leftHalf = new int[midIndex];
-        int[] rightHalf = new int[size - midIndex];
+        int mid_index = size / 2;
+        int[] left_half = new int[mid_index];
+        int[] right_half = new int[size - mid_index];
 
-        for (int i = 0; i < midIndex; i++) {
-            leftHalf[i] = array[i];
+        for (i = 0; i < mid_index; i++) {
+            left_half[i] = array[i];
         }
-        for (int i = midIndex; i < size; i++) {
-            rightHalf[i - midIndex] = array[i];
+        for (i = mid_index; i < size; i++) {
+            right_half[i - mid_index] = array[i];
         }
 
         // Recursive call.
-        method(leftHalf);
-        method(rightHalf);
+        method(left_half);
+        method(right_half);
 
         // Merge arrays.
-        merge(array, leftHalf, rightHalf);
+        merge(array, left_half, right_half);
     }
 
     // Merge arrays.
-    static void merge(int[] array, int[] leftHalf, int[] rightHalf) {
-        int leftsize = leftHalf.length;
-        int rightsize = rightHalf.length;
-        int i = 0, j = 0, k = 0;
+    static void merge(int[] array, int[] left_half, int[] right_half) {
+        int left_size = left_half.length;
+        int right_size = right_half.length;
+        int i = 0;
+        int j = 0;
+        int k = 0;
 
         // Run until one array becames empty.
-        while ((i < leftsize) && (j < rightsize)) {
-            if (leftHalf[i] < rightHalf[j]) {
-                array[k] = leftHalf[i];
+        while ((i < left_size) && (j < right_size)) {
+            if (left_half[i] < right_half[j]) {
+                array[k] = left_half[i];
                 i++;
             } else {
-                array[k] = rightHalf[j];
+                array[k] = right_half[j];
                 j++;
             }
             k++;
         }
         // Empty remaining array.
-        while (i < leftsize) {
-            array[k] = leftHalf[i];
+        while (i < left_size) {
+            array[k] = left_half[i];
             i++;
             k++;
         }
-        while (j < rightsize) {
-            array[k] = rightHalf[j];
+        while (j < right_size) {
+            array[k] = right_half[j];
             j++;
             k++;
         }
