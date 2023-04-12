@@ -14,12 +14,31 @@ This repository contains the following sorting algorithms:
 * Merge Sort
     * A divide-and-conquer algorithm that first divides the array into a single element sub-arrays and then repeatedly merge those into new sorted subsets.
     * MergeSort.java
+* Insertion Sort
+    * A sorting algorithm that compares one item at time to build the sorted array.
+    * InsertionSort.java
 
 ## Getting Started
 
 ### Dependencies
 
 * Java Development Kit (JDK).
+
+### Folder Structure
+````
+JAVA - SORT METHODS
+├── src
+│   ├── App.java
+│   ├── BubbleSort.java
+│   ├── InsertionSort.java
+│   ├── MergeSort.java
+│   ├── QuickSort.java
+├── bin
+├── lib
+├── .gitignore
+├── LICENSE
+└── README.md
+````
 
 ### Executing program
 
